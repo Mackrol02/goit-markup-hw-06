@@ -700,7 +700,7 @@ textarea {
   position: absolute;
   top: 20.75%;
   left: 50px;
-  --color4: #212121;
+  --color1: #212121;
 }
 .vector-tel {
   position: absolute;
@@ -712,7 +712,7 @@ textarea {
 .vector-tel:focus,
 .vector-email:focus {
   fill: var(--blue-color);
-  --color4: var(--blue-color);
+  --color1: var(--blue-color);
 }
 .modal-input-name:focus,
 .modal-input-tel:focus,
@@ -724,9 +724,31 @@ textarea {
 .modal-input-name:focus + .vector-name,
 .modal-input-tel:focus + .vector-tel,
 .modal-input-email:focus + .vector-email {
-  --color4: var(--blue-color);
+  --color1: var(--blue-color);
   fill: var(--blue-color);
 }
-.modal-input-checkbox {
+.label-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
   margin-left: 20px;
+}
+.modal-input-checkbox {
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+  height: 16px;
+  width: 15px;
+  margin-top: 1px;
+  margin-left: -10px;
+}
+.icon-Vectorcheck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.modal-input-checkbox:checked ~ .icon-Vectorcheck {
+  --color1: var(--color-bottom-footer);
+  visibility: visible;
 }
